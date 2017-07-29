@@ -13,8 +13,6 @@ export class ResultsComponent implements OnInit {
   @Input() category: string;
   @Input() viewMode: string;
 
-  @Output() categoriesMenu = new EventEmitter<string>();
-
   results: Array<object> = [];
 
 
