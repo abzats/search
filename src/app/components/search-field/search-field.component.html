@@ -1,0 +1,14 @@
+<form (ngSubmit)="searchSubmit(form)" #form="ngForm">
+  <div class="form-group pb-24">
+    <label for="search" class="form-group__label text-md-1 pb-12">
+      Enter your keywords
+    </label>
+    <input
+      type="search"
+      id="search"
+      name="search"
+      class="form-group__input"
+      [(ngModel)]="globals.query">
+    <button class="form__btn--submit" type="submit">Search</button>
+  </div>
+</form>

@@ -1,0 +1,20 @@
+<div class="{{ viewMode }}">
+  <article *ngFor="let result of results | orderBy: sort | filterBy: {'label' : [category]}">
+    <a href="{{ result.link }}" class="text-gray pb-12">
+      <h3 class="underline">{{ result.headline }}</h3>
+    </a>
+    <p class="pb-12" [innerHtml]="result.body | nl2br | hl:globals.query"></p>
+    <div class="row">
+      <div class="col-6">
+        <div class="tag" *ngFor="let label of result.label" (click)="category = label; categoriesMenu.emit(label)">
+          <i class="fa fa-tag" aria-hidden="true"></i> {{ label }}
+        </div>
+      </div>
+      <div class="col-6 text-right text-gray-light">
+        <strong>
+          {{ result.date | date: 'yyyy.MM.dd' }}
+        </strong>
+      </div>
+    </div>
+  </article>
+</div>

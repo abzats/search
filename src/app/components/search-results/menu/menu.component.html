@@ -1,0 +1,10 @@
+<div class="menu">
+  <div class="menu__item" [class.active]="category === ''" (click)="categoriesMenu.emit('')">
+    All results
+  </div>
+  <ng-template ngFor let-menuItem [ngForOf]="menu">
+    <div class="menu__item" [class.active]="category === menuItem.label" (click)="categoriesMenu.emit(menuItem.label)">
+      {{ menuItem.title }}
+    </div>
+  </ng-template>
+</div>

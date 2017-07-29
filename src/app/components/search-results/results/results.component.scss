@@ -1,0 +1,62 @@
+// Variables;
+@import '../../../../assets/sass/base/variables';
+
+article {
+  position: relative;
+  padding: 18px 0;
+  border-bottom: 1px solid $gray-light;
+  a {
+    display: block;
+    &:hover, &:visited {
+      color: $brand-primary;
+    }
+  }
+  h3 {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+  .tag {
+    display: inline-block;
+    padding: 4px 6px;
+    background-color: $gray-dark;
+    color: $white;
+    border-radius: 2px;
+    opacity: .6;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    & + .tag {
+      margin-left: 4px;
+    }
+    .fa {
+      font-size: 12px;
+    }
+  }
+  .row {
+    .col-6.col-6 {
+      width: 50%;
+    }
+  }
+}
+
+.cards {
+  width: calc(100% + 24px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-top: 24px;
+  article {
+    position: relative;
+    width: calc(50% - 24px);
+    margin: 0 12px 12px;
+    padding: 22px 18px;
+    border: 1px solid $gray-lighter;
+    box-shadow: 0 2px 3px 0 rgba(21,21,43,.04);
+    @media (max-width: $sm + 1px) {
+      width: 100%;
+    }
+  }
+}

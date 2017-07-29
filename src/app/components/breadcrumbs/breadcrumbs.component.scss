@@ -1,0 +1,32 @@
+// Variables;
+@import '../../../assets/sass/base/variables';
+
+.breadcrumb {
+  overflow: hidden;
+  font-size: 12px;
+  margin: 1.2em 0 2em;
+  color: $gray-light;
+  .breadcrumb__item {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    opacity: .7;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:nth-child(n+2):before {
+      content: "/";
+      display: inline;
+      float: left;
+      margin: 0 5px;
+    }
+    .breadcrumb__item__link {
+      &, &:visited, &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}

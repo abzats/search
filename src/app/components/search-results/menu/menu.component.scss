@@ -1,0 +1,41 @@
+// Variables;
+@import '../../../../assets/sass/base/variables';
+
+:host {
+  position: relative;
+  display: block;
+  text-align: right;
+}
+.menu {
+  min-width: 180px;
+  display: inline-block;
+  margin-top: 24px;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  text-align: left;
+  @media (max-width: $lg + 1px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px;
+    cursor: pointer;
+    & + .menu__item {
+      border-top: 1px solid $gray;
+      @media (max-width: $lg + 1px) {
+        border: none;
+      }
+    }
+    &.active.active {
+      background-color: $brand-primary;
+      color: $white;
+    }
+    @media (max-width: $lg + 1px) {
+      width: 33.3%;
+      text-align: center;
+    }
+  }
+}

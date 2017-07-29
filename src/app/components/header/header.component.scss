@@ -1,0 +1,15 @@
+// Variables;
+@import '../../../assets/sass/base/variables';
+
+:host {
+  position: relative;
+  display: block;
+  height: 70px;
+  border-bottom: 1px solid $gray-light;
+}
+.row {
+  height: 70px;
+  .col-12 {
+    align-self: center;
+  }
+}
